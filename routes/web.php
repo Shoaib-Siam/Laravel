@@ -13,8 +13,8 @@ Route::get('/blogs', function () {
     ]);
 });
 
-Route::get('/blogs/{id}', function ($id) {
-    $blog = Blog::find($id);
+Route::get('/blogs/{blog}', function (Blog $blog) {
+    
 
     return view('blog', ['blog' => $blog]);
 });
